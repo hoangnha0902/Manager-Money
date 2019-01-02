@@ -1,8 +1,6 @@
 package com.nhahv.managermoneymvvm.ui.main
 
 import com.nhahv.managermoneymvvm.BaseViewModel
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 
 class MainViewModel : BaseViewModel() {
     // TODO: Implement the ViewModel
@@ -12,7 +10,7 @@ class MainViewModel : BaseViewModel() {
     }
 
     private fun loadDatas() {
-        subscription = postAPI.getPosts()
+       /* subscription = postAPI.getPosts()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnSubscribe { println("=================== start") }
@@ -20,6 +18,6 @@ class MainViewModel : BaseViewModel() {
             .subscribe(
                 { result -> println("=================== $result") },
                 { println("=================== error") }
-            )
+            )*/
     }
 }

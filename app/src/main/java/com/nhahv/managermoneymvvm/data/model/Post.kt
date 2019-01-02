@@ -1,3 +1,7 @@
 package com.nhahv.managermoneymvvm.data.model
 
-data class Post(val userId: Int, val id: Int, val title: String, val body: String)
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
+
+@Entity
+data class Post(val userId: Int, @PrimaryKey val id: Int, val title: String, val body: String)

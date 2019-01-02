@@ -7,7 +7,7 @@ import io.reactivex.disposables.Disposable
 import javax.inject.Inject
 
 open class BaseViewModel : ViewModel() {
-    lateinit var subscription: Disposable
+    var subscription: Disposable? = null
     @Inject
     lateinit var postAPI: PostAPI
 
@@ -17,6 +17,6 @@ open class BaseViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
-        subscription.dispose()
+        subscription?.dispose()
     }
 }
